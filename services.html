@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./services.css" />
+
+    <title>BankDash | Services</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li>
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li>
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Services</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="icon blue">
+              <i class="ph-fill ph-shield-checkered"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Life Insurance</span>
+
+              <span class="stat-value">Unlimited protection</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon yellow">
+              <i class="ph-fill ph-shopping-bag"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Shopping</span>
+
+              <span class="stat-value">Buy. Think. Grow.</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon green">
+              <i class="ph-fill ph-shield-check"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Safety</span>
+
+              <span class="stat-value">We are your allies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-services-list">
+          <div class="header">
+            <h4>Bank Services List</h4>
+          </div>
+
+          <div class="bank-services-list-container">
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon red">
+                  <i class="ph-fill ph-coins"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Business loans</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon yellow">
+                  <i class="ph-fill ph-briefcase"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Checking accounts</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon red">
+                  <i class="ph-fill ph-chart-bar"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Savings accounts</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon blue">
+                  <i class="ph-fill ph-user"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Debit and credit cards</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon green">
+                  <i class="ph-fill ph-shield-check"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Life Insurance</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+
+            <div class="bank-services-data">
+              <div class="bank-services-info-container">
+                <div class="icon red">
+                  <i class="ph-fill ph-coins"></i>
+                </div>
+
+                <div class="bank-services-info">
+                  <span class="title">Business loans</span>
+
+                  <span class="value">It is a long established</span>
+                </div>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <div class="bank-services-info">
+                <span class="title">Lorem Ipsum</span>
+
+                <span class="value">Many publishing</span>
+              </div>
+
+              <button type="button" class="view-details">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

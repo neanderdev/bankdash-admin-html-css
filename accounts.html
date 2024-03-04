@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./accounts.css" />
+
+    <title>BankDash | Accounts</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li>
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li>
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Accounts</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="icon yellow">
+              <i class="ph-fill ph-coin-vertical"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">My Balance</span>
+
+              <span class="stat-value">$12,750</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon blue">
+              <i class="ph-fill ph-hand-coins"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Income</span>
+
+              <span class="stat-value">$5,600</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon red">
+              <i class="ph-fill ph-receipt"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Expense</span>
+
+              <span class="stat-value">$3,460</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon green">
+              <i class="ph-fill ph-piggy-bank"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Total Saving</span>
+
+              <span class="stat-value">$7,920</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="last-transaction-and-my-card">
+          <div class="last-transaction">
+            <div class="header">
+              <h4>Last Transaction</h4>
+            </div>
+
+            <div class="last-transaction-table">
+              <div class="last-transaction-table-data">
+                <div class="icon green">
+                  <i class="ph ph-bell-simple"></i>
+                </div>
+
+                <div>
+                  <span class="name">Spotify Subscription</span>
+
+                  <span class="date">25 Jan 2024</span>
+                </div>
+
+                <span class="type">Shopping</span>
+
+                <span class="card-number">1234 ****</span>
+
+                <span class="status">Pending</span>
+
+                <span class="value expense">-$150</span>
+              </div>
+
+              <div class="last-transaction-table-data">
+                <div class="icon blue">
+                  <i class="ph ph-wrench"></i>
+                </div>
+
+                <div>
+                  <span class="name">Mobile Service</span>
+
+                  <span class="date">25 Jan 2024</span>
+                </div>
+
+                <span class="type">Service</span>
+
+                <span class="card-number">1234 ****</span>
+
+                <span class="status">Completed</span>
+
+                <span class="value expense">-$340</span>
+              </div>
+
+              <div class="last-transaction-table-data">
+                <div class="icon red">
+                  <i class="ph ph-user"></i>
+                </div>
+
+                <div>
+                  <span class="name">Neander de Souza</span>
+
+                  <span class="date">25 Jan 2024</span>
+                </div>
+
+                <span class="type">Transfer</span>
+
+                <span class="card-number">1234 ****</span>
+
+                <span class="status">Completed</span>
+
+                <span class="value income">+$780</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-card">
+            <div class="header">
+              <h4>My Card</h4>
+
+              <a href="">See All</a>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <div>
+                  <div class="text">
+                    <span class="title">Balance</span>
+
+                    <span class="value">$5,756</span>
+                  </div>
+
+                  <img src="./assets/chip-card-white.png" alt="Chip Card" />
+                </div>
+
+                <div>
+                  <div class="text">
+                    <span class="title">Card Holder</span>
+
+                    <span class="value">Neander de Souza</span>
+                  </div>
+
+                  <div class="text">
+                    <span class="title">Valid Thru</span>
+
+                    <span class="value">12/24</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-bottom">
+                <span>3778 **** **** 1234</span>
+
+                <img src="./assets/flag-card-white.svg" alt="Flag Card" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="debit-credit-overview-and-invoices-sent">
+          <div class="debit-credit-overview">
+            <div class="header">
+              <h4>Debit & Credit Overview</h4>
+            </div>
+
+            <div class="debit-credit-overview-container">
+              <div class="debit-credit-overview-header">
+                <p>
+                  <span>$7,560</span> Debited &
+                  <span>$5,420$5,420</span> Credited in this Week
+                </p>
+
+                <div class="debit-credit-overview-label">
+                  <label class="debit">Debit</label>
+
+                  <label class="credit">Credit</label>
+                </div>
+              </div>
+
+              <canvas id="chart-debit-credit-overview"></canvas>
+            </div>
+          </div>
+
+          <div class="invoices-sent">
+            <div class="header">
+              <h4>Invoices Sent</h4>
+            </div>
+
+            <div class="invoices-sent-container">
+              <div class="invoices-sent-data">
+                <div class="invoices-sent-data-info">
+                  <div class="icon green">
+                    <i class="ph ph-apple-logo"></i>
+                  </div>
+
+                  <div>
+                    <span class="name">Apple Store</span>
+
+                    <span class="time">5h ago</span>
+                  </div>
+                </div>
+
+                <span class="value">$450</span>
+              </div>
+
+              <div class="invoices-sent-data">
+                <div class="invoices-sent-data-info">
+                  <div class="icon yellow">
+                    <i class="ph ph-user"></i>
+                  </div>
+
+                  <div>
+                    <span class="name">John Doe</span>
+
+                    <span class="time">2 days ago</span>
+                  </div>
+                </div>
+
+                <span class="value">$160</span>
+              </div>
+
+              <div class="invoices-sent-data">
+                <div class="invoices-sent-data-info">
+                  <div class="icon blue">
+                    <i class="ph ph-game-controller"></i>
+                  </div>
+
+                  <div>
+                    <span class="name">Playstation</span>
+
+                    <span class="time">5 days ago</span>
+                  </div>
+                </div>
+
+                <span class="value">$1085</span>
+              </div>
+
+              <div class="invoices-sent-data">
+                <div class="invoices-sent-data-info">
+                  <div class="icon red">
+                    <i class="ph ph-user"></i>
+                  </div>
+
+                  <div>
+                    <span class="name">John Doe</span>
+
+                    <span class="time">10 days ago</span>
+                  </div>
+                </div>
+
+                <span class="value">$90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const dataDebitCreditOverview = {
+      labels: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fru"],
+      datasets: [
+        {
+          label: "Debit",
+          data: [500, 350, 75, 90, 250, 275, 190],
+          backgroundColor: "#1A16F3",
+          borderColor: "#1A16F3",
+          borderWidth: 1,
+          borderRadius: Number.MAX_VALUE,
+          borderSkipped: false,
+          barPercentage: 0.4,
+        },
+        {
+          label: "Credit",
+          data: [150, 125, 475, 55, 279, 263, 45],
+          backgroundColor: "#FCAA0B",
+          borderColor: "#FCAA0B",
+          borderWidth: 1,
+          borderRadius: Number.MAX_VALUE,
+          borderSkipped: false,
+          barPercentage: 0.4,
+        },
+      ],
+    };
+
+    const configDebitCreditOverview = {
+      type: "bar",
+      data: dataDebitCreditOverview,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxDebitCreditOverview = document.getElementById(
+      "chart-debit-credit-overview"
+    );
+
+    new Chart(ctxDebitCreditOverview, configDebitCreditOverview);
+
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

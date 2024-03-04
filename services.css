@@ -1,0 +1,714 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+
+  background-color: #f5f7fa;
+}
+
+aside {
+  width: 25rem;
+  height: 100%;
+
+  background-color: #ffffff;
+}
+
+aside .close {
+  background: transparent;
+  border: 0;
+
+  display: none;
+  justify-content: end;
+
+  cursor: pointer;
+}
+
+aside .close i {
+  font-size: 2.4rem;
+
+  color: #1fcb4f;
+}
+
+aside .logo {
+  padding: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+aside .logo h4 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+aside ul {
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+aside ul li {
+  display: flex;
+  align-items: center;
+}
+
+aside ul li.active::before {
+  content: "";
+
+  width: 0.6rem;
+  height: 4rem;
+
+  position: absolute;
+
+  left: 0;
+
+  background-color: var(--Primary-3, #2d60ff);
+
+  border-top-right-radius: 0.42rem;
+  border-bottom-right-radius: 0.42rem;
+}
+
+aside ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: #b1b1b1;
+
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+aside ul li.active a {
+  color: var(--Primary-3, #2d60ff);
+}
+
+aside ul li a i {
+  color: #b1b1b1;
+
+  font-size: 2.4rem;
+}
+
+aside ul li.active a i {
+  color: var(--Primary-3, #2d60ff);
+}
+
+main {
+  width: 100%;
+}
+
+main header {
+  width: 100%;
+  height: 10rem;
+
+  padding: 0 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+}
+
+main header .header-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .header-container .open-sidebar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .header-container .open-sidebar i {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 3.2rem;
+}
+
+main header .header-container h2 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main header .info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .info .input-icon {
+  width: 25rem;
+
+  padding: 1.2rem 0;
+
+  background-color: #f5f7fa;
+
+  border-radius: 4rem;
+
+  position: relative;
+}
+
+main header .info .input-icon i {
+  color: #718ebf;
+
+  font-size: 2rem;
+
+  position: absolute;
+
+  left: 1.2rem;
+}
+
+main header .info .input-icon input {
+  width: 100%;
+
+  padding-left: 3.6rem;
+  padding-right: 1.2rem;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .info .button-icon {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f7fa;
+
+  outline: 0;
+  border: 0;
+  border-radius: 2.5rem;
+}
+
+main header .info .button-icon i {
+  font-size: 2.4rem;
+}
+
+main header .info .button-icon.settings i {
+  color: #718ebf;
+}
+
+main header .info .button-icon.notifications i {
+  color: #fe5c73;
+}
+
+main header .info .avatar {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 2.5rem;
+}
+
+main .container {
+  padding: 2rem 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+main .container .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+main .container .stats .stat {
+  padding: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  background-color: #ffffff;
+
+  border-radius: 2.4rem;
+}
+
+main .container .stats .stat .icon {
+  width: 7rem;
+  height: 7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3.5rem;
+}
+
+main .container .stats .stat .icon.blue {
+  background-color: #e7edff;
+}
+
+main .container .stats .stat .icon.yellow {
+  background-color: #fff5d9;
+}
+
+main .container .stats .stat .icon.green {
+  background-color: #dcfaf8;
+}
+
+main .container .stats .stat .icon i {
+  font-size: 3rem;
+}
+
+main .container .stats .stat .icon.blue i {
+  color: #396aff;
+}
+
+main .container .stats .stat .icon.yellow i {
+  color: #ffbb38;
+}
+
+main .container .stats .stat .icon.green i {
+  color: #16dbcc;
+}
+
+main .container .stats .stat .stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+main .container .stats .stat .stat-info .stat-title {
+  color: #232323;
+
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .stats .stat .stat-info .stat-value {
+  color: #718ebf;
+
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main .container .bank-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .bank-services-list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .bank-services-list .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .bank-services-list .bank-services-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data {
+  padding: 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon {
+  width: 6rem;
+  height: 6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 2rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.red {
+  background-color: #ffe0eb;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.yellow {
+  background-color: #fff5d9;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.blue {
+  background-color: #e7edff;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.green {
+  background-color: #dcfaf8;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon
+  i {
+  font-size: 2.4rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.red
+  i {
+  color: #ff82ac;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.yellow
+  i {
+  color: #ffbb38;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.blue
+  i {
+  color: #396aff;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .icon.green
+  i {
+  color: #16dbcc;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .bank-services-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .bank-services-info
+  .title {
+  color: #232323;
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info-container
+  .bank-services-info
+  .value {
+  color: #718ebf;
+
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info
+  .title {
+  color: #232323;
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  .bank-services-info
+  .value {
+  color: #718ebf;
+
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  button {
+  padding: 0.6rem 1.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  color: #718ebf;
+
+  outline: 0;
+  border: 0.1rem solid #718ebf;
+  border-radius: 99rem;
+
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  transition: 200ms;
+}
+
+main
+  .container
+  .bank-services-list
+  .bank-services-list-container
+  .bank-services-data
+  button:hover {
+  color: #1814f3;
+
+  border: 0.1rem solid #1814f3;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  aside {
+    display: none;
+
+    position: fixed;
+
+    margin-left: -100vw;
+
+    animation-duration: 500ms;
+  }
+
+  aside .close {
+    display: flex;
+
+    width: 100%;
+
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+
+  aside .close i {
+    display: block;
+  }
+
+  main header .header-container .open-sidebar {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .container .stats {
+    grid-template-columns: 1fr;
+  }
+
+  main
+    .container
+    .bank-services-list
+    .bank-services-list-container
+    .bank-services-data {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main header .info .input-icon,
+  main header .info .settings,
+  main header .info .notifications {
+    display: none;
+  }
+}
+
+@keyframes showSidebar {
+  from {
+    margin-left: -100vw;
+  }
+  to {
+    margin-left: -0vw;
+  }
+}

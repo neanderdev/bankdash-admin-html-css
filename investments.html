@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./investments.css" />
+
+    <title>BankDash | Investments</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li>
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li>
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li>
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Investments</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="icon green">
+              <i class="ph-fill ph-wallet"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Total Invested Amount</span>
+
+              <span class="stat-value">$150,000</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon red">
+              <i class="ph-fill ph-chart-pie-slice"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Number of Investments</span>
+
+              <span class="stat-value">$1,250</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="icon blue">
+              <i class="ph-fill ph-repeat"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-title">Rate of Return</span>
+
+              <span class="stat-value">+5.80%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="yearly-total-investment-and-monthly-revenue">
+          <div class="yearly-total-investment">
+            <div class="header">
+              <h4>Yearly Total Investment</h4>
+            </div>
+
+            <div class="yearly-total-investment-container">
+              <canvas id="chart-yearly-total-investment"></canvas>
+            </div>
+          </div>
+
+          <div class="monthly-revenue">
+            <div class="header">
+              <h4>Monthly Revenue</h4>
+            </div>
+
+            <div class="monthly-revenue-container">
+              <canvas id="chart-monthly-revenue"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-investment-and-trending-stock">
+          <div class="my-investment">
+            <div class="header">
+              <h4>My Investment</h4>
+            </div>
+
+            <div class="my-investment-container">
+              <div class="my-investment-data">
+                <div class="my-investment-data-info">
+                  <div class="icon red">
+                    <i class="ph-fill ph-apple-logo"></i>
+                  </div>
+
+                  <div class="my-investment-data-info-container">
+                    <span class="name">Apple Store</span>
+
+                    <span class="type">E-commerce, Marketplace</span>
+                  </div>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value">$54,000</span>
+
+                  <span class="type">Investment Value</span>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value sum">+16%</span>
+
+                  <span class="type">Return Value</span>
+                </div>
+              </div>
+
+              <div class="my-investment-data">
+                <div class="my-investment-data-info">
+                  <div class="icon blue">
+                    <i class="ph ph-google-logo"></i>
+                  </div>
+
+                  <div class="my-investment-data-info-container">
+                    <span class="name">Samsung Mobile</span>
+
+                    <span class="type">E-commerce, Marketplace</span>
+                  </div>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value">$25,300</span>
+
+                  <span class="type">Investment Value</span>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value minus">-4%</span>
+
+                  <span class="type">Return Value</span>
+                </div>
+              </div>
+
+              <div class="my-investment-data">
+                <div class="my-investment-data-info">
+                  <div class="icon yellow">
+                    <i class="ph-fill ph-car-profile"></i>
+                  </div>
+
+                  <div class="my-investment-data-info-container">
+                    <span class="name">Tesla Motors</span>
+
+                    <span class="type">Electric Vehicles</span>
+                  </div>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value">$8,200</span>
+
+                  <span class="type">Investment Value</span>
+                </div>
+
+                <div class="my-investment-data-info-container">
+                  <span class="value sum">+25%</span>
+
+                  <span class="type">Return Value</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trending-stock">
+            <div class="header">
+              <h4>Trending Stock</h4>
+            </div>
+
+            <div class="trending-stock-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div>
+                        <span>SL No</span>
+                      </div>
+                    </th>
+
+                    <th>
+                      <div>
+                        <span>Name</span>
+                      </div>
+                    </th>
+
+                    <th>
+                      <div>
+                        <span>Price</span>
+                      </div>
+                    </th>
+
+                    <th>
+                      <div>
+                        <span>Return</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="sl-no">
+                        <span class="title-head">SL No</span>
+
+                        <span>01.</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="name">
+                        <span class="title-head">Name</span>
+
+                        <span>Trivago</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="price">
+                        <span class="title-head">Price</span>
+
+                        <span>$520</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="return">
+                        <span class="title-head">Return</span>
+
+                        <span class="sum">+5%</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="sl-no">
+                        <span class="title-head">SL No</span>
+
+                        <span>02.</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="name">
+                        <span class="title-head">Name</span>
+
+                        <span>Canon</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="price">
+                        <span class="title-head">Price</span>
+
+                        <span>$480</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="return">
+                        <span class="title-head">Return</span>
+
+                        <span class="sum">+10%</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="sl-no">
+                        <span class="title-head">SL No</span>
+
+                        <span>03.</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="name">
+                        <span class="title-head">Name</span>
+
+                        <span>Uber Food</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="price">
+                        <span class="title-head">Price</span>
+
+                        <span>$350</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="return">
+                        <span class="title-head">Return</span>
+
+                        <span class="minus">-3%</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="sl-no">
+                        <span class="title-head">SL No</span>
+
+                        <span>04.</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="name">
+                        <span class="title-head">Name</span>
+
+                        <span>Nokia</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="price">
+                        <span class="title-head">Price</span>
+
+                        <span>$940</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="return">
+                        <span class="title-head">Return</span>
+
+                        <span class="sum">+2%</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="sl-no">
+                        <span class="title-head">SL No</span>
+
+                        <span>05.</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="name">
+                        <span class="title-head">Name</span>
+
+                        <span>Tiktok</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="price">
+                        <span class="title-head">Price</span>
+
+                        <span>$670</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="return">
+                        <span class="title-head">Return</span>
+
+                        <span class="minus">-12%</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const dataYearlyTotalInvestment = {
+      labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
+      datasets: [
+        {
+          label: "Yearly Total Investment",
+          data: [600, 685, 102, 259, 870, 402],
+          borderColor: "#EDA10D",
+          pointStyle: true,
+        },
+      ],
+    };
+
+    const configYearlyTotalInvestment = {
+      type: "line",
+      data: dataYearlyTotalInvestment,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxYearlyTotalInvestment = document.getElementById(
+      "chart-yearly-total-investment"
+    );
+
+    new Chart(ctxYearlyTotalInvestment, configYearlyTotalInvestment);
+
+    const dataMonthlyRevenue = {
+      labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
+      datasets: [
+        {
+          label: "Monthly Revenue",
+          data: [600, 685, 102, 259, 870, 402],
+          borderColor: "#16DBCC",
+          pointStyle: false,
+          tension: 0.4,
+        },
+      ],
+    };
+
+    const configMonthlyRevenue = {
+      type: "line",
+      data: dataMonthlyRevenue,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxMonthlyRevenue = document.getElementById("chart-monthly-revenue");
+
+    new Chart(ctxMonthlyRevenue, configMonthlyRevenue);
+
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./credit-cards.css" />
+
+    <title>BankDash | Credit Cards</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li>
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li>
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Credit Cards</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="cards-container">
+          <div class="header">
+            <h4>My Cards</h4>
+          </div>
+
+          <div class="cards">
+            <div class="card blue">
+              <div class="card-top">
+                <div>
+                  <div class="text">
+                    <span class="title">Balance</span>
+
+                    <span class="value">$5,756</span>
+                  </div>
+
+                  <img src="./assets/chip-card-white.png" alt="Chip Card" />
+                </div>
+
+                <div>
+                  <div class="text">
+                    <span class="title">Card Holder</span>
+
+                    <span class="value">Neander de Souza</span>
+                  </div>
+
+                  <div class="text">
+                    <span class="title">Valid Thru</span>
+
+                    <span class="value">12/24</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-bottom">
+                <span>3778 **** **** 1234</span>
+
+                <img src="./assets/flag-card-white.svg" alt="Flag Card" />
+              </div>
+            </div>
+
+            <div class="card purple">
+              <div class="card-top">
+                <div>
+                  <div class="text">
+                    <span class="title">Balance</span>
+
+                    <span class="value">$5,756</span>
+                  </div>
+
+                  <img src="./assets/chip-card-white.png" alt="Chip Card" />
+                </div>
+
+                <div>
+                  <div class="text">
+                    <span class="title">Card Holder</span>
+
+                    <span class="value">Neander de Souza</span>
+                  </div>
+
+                  <div class="text">
+                    <span class="title">Valid Thru</span>
+
+                    <span class="value">12/24</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-bottom">
+                <span>3778 **** **** 1234</span>
+
+                <img src="./assets/flag-card-white.svg" alt="Flag Card" />
+              </div>
+            </div>
+
+            <div class="card white">
+              <div class="card-top">
+                <div>
+                  <div class="text">
+                    <span class="title">Balance</span>
+
+                    <span class="value">$5,756</span>
+                  </div>
+
+                  <img src="./assets/chip-card-gray.png" alt="Chip Card" />
+                </div>
+
+                <div>
+                  <div class="text">
+                    <span class="title">Card Holder</span>
+
+                    <span class="value">Neander de Souza</span>
+                  </div>
+
+                  <div class="text">
+                    <span class="title">Valid Thru</span>
+
+                    <span class="value">12/24</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-bottom">
+                <span>3778 **** **** 1234</span>
+
+                <img src="./assets/flag-card-gray.svg" alt="Flag Card" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-expense-statistics-and-card-list">
+          <div class="card-expense-statistics">
+            <div class="header">
+              <h4>Card Expense Statistics</h4>
+            </div>
+
+            <div class="card-expense-statistics-container">
+              <canvas id="chart-card-expense-statistics"></canvas>
+
+              <div class="card-expense-statistics-label">
+                <label class="dbl-bank">DBL Bank</label>
+
+                <label class="brc-bank">BRC Bank</label>
+
+                <label class="abm-bank">ABM Bank</label>
+
+                <label class="mcp-bank">MCP Bank</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-list">
+            <div class="header">
+              <h4>Card List</h4>
+            </div>
+
+            <div class="card-list-container">
+              <div class="card-list-data">
+                <div class="card-list-data-info">
+                  <div class="icon blue">
+                    <i class="ph-fill ph-credit-card"></i>
+                  </div>
+
+                  <div class="card-list-data-info-container">
+                    <span class="name">Card Type</span>
+
+                    <span class="type">Secondary</span>
+                  </div>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Bank</span>
+
+                  <span class="type">DBL Bank</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Card Number</span>
+
+                  <span class="type">**** **** **** 4300</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Namane Card</span>
+
+                  <span class="type">John Doe</span>
+                </div>
+
+                <a href="">View Details</a>
+              </div>
+
+              <div class="card-list-data">
+                <div class="card-list-data-info">
+                  <div class="icon red">
+                    <i class="ph-fill ph-credit-card"></i>
+                  </div>
+
+                  <div class="card-list-data-info-container">
+                    <span class="name">Card Type</span>
+
+                    <span class="type">Secondary</span>
+                  </div>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Bank</span>
+
+                  <span class="type">BRC Bank</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Card Number</span>
+
+                  <span class="type">**** **** **** 5400</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Namane Card</span>
+
+                  <span class="type">John Doe</span>
+                </div>
+
+                <a href="">View Details</a>
+              </div>
+
+              <div class="card-list-data">
+                <div class="card-list-data-info">
+                  <div class="icon yellow">
+                    <i class="ph-fill ph-credit-card"></i>
+                  </div>
+
+                  <div class="card-list-data-info-container">
+                    <span class="name">Card Type</span>
+
+                    <span class="type">Secondary</span>
+                  </div>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Bank</span>
+
+                  <span class="type">ABM Bank</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Card Number</span>
+
+                  <span class="type">**** **** **** 6500</span>
+                </div>
+
+                <div class="card-list-data-info-container">
+                  <span class="value">Namane Card</span>
+
+                  <span class="type">John Doe</span>
+                </div>
+
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-new-card-and-card-setting">
+          <div class="add-new-card">
+            <div class="header">
+              <h4>Add New Card</h4>
+            </div>
+
+            <div class="add-new-card-container">
+              <p>
+                Credit Card generally means a plastic card issued by Scheduled
+                Commercial Banks assigned to a Cardholder, with a credit limit,
+                that can be used to purchase goods and services on credit or
+                obtain cash advances.
+              </p>
+
+              <div class="add-new-card-info-container">
+                <div class="add-new-card-info">
+                  <span class="title">Card Type</span>
+
+                  <span class="value">Classic</span>
+                </div>
+
+                <div class="add-new-card-info">
+                  <span class="title">Name on Card</span>
+
+                  <span class="value">John Doe</span>
+                </div>
+
+                <div class="add-new-card-info">
+                  <span class="title">Card Number</span>
+
+                  <span class="value">**** **** **** ****</span>
+                </div>
+
+                <div class="add-new-card-info">
+                  <span class="title">Expiration Date</span>
+
+                  <span class="value">25 January 2028</span>
+                </div>
+              </div>
+
+              <button type="button">Add New Card</button>
+            </div>
+          </div>
+
+          <div class="card-setting">
+            <div class="header">
+              <h4>Card Setting</h4>
+            </div>
+
+            <div class="card-setting-container">
+              <div class="card-setting-data">
+                <div class="icon yellow">
+                  <i class="ph ph-credit-card"></i>
+                </div>
+
+                <div class="card-setting-info">
+                  <span class="name">Block Card</span>
+
+                  <span class="value">Instantly block your card</span>
+                </div>
+              </div>
+
+              <div class="card-setting-data">
+                <div class="icon blue">
+                  <i class="ph ph-lock"></i>
+                </div>
+
+                <div class="card-setting-info">
+                  <span class="name">Change Pin Code</span>
+
+                  <span class="value">Choose another pin code</span>
+                </div>
+              </div>
+
+              <div class="card-setting-data">
+                <div class="icon red">
+                  <i class="ph ph-google-logo"></i>
+                </div>
+
+                <div class="card-setting-info">
+                  <span class="name">Add to Google Pay</span>
+
+                  <span class="value">Withdraw without any card</span>
+                </div>
+              </div>
+
+              <div class="card-setting-data">
+                <div class="icon green">
+                  <i class="ph ph-apple-logo"></i>
+                </div>
+
+                <div class="card-setting-info">
+                  <span class="name">Add to Apple Pay</span>
+
+                  <span class="value">Withdraw without any card</span>
+                </div>
+              </div>
+
+              <div class="card-setting-data">
+                <div class="icon green">
+                  <i class="ph ph-apple-logo"></i>
+                </div>
+
+                <div class="card-setting-info">
+                  <span class="name">Add to Apple Store</span>
+
+                  <span class="value">Withdraw without any card</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const dataCardExpenseStatistics = {
+      labels: ["DBL Bank", "MCP Bank", "BRC Bank", "ABM Bank"],
+      datasets: [
+        {
+          label: "Card Expense Statistics",
+          data: [30, 15, 35, 20],
+          backgroundColor: ["#4C78FF", "#FFBB38", "#FF82AC", "#16DBCC"],
+        },
+      ],
+    };
+
+    const configCardExpenseStatistics = {
+      type: "doughnut",
+      data: dataCardExpenseStatistics,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxCardExpenseStatistics = document.getElementById(
+      "chart-card-expense-statistics"
+    );
+
+    new Chart(ctxCardExpenseStatistics, configCardExpenseStatistics);
+
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

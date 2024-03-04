@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./transactions.css" />
+
+    <title>BankDash | Transactions</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li>
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li>
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li>
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Transactions</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="my-cards-and-my-expense">
+          <div class="my-cards">
+            <div class="header">
+              <h4>My Cards</h4>
+
+              <button type="button" class="add-card">
+                <i class="ph ph-plus"></i>
+
+                Add Card
+              </button>
+            </div>
+
+            <div class="cards">
+              <div class="card purple">
+                <div class="card-top">
+                  <div>
+                    <div class="text">
+                      <span class="title">Balance</span>
+
+                      <span class="value">$5,756</span>
+                    </div>
+
+                    <img src="./assets/chip-card-white.png" alt="Chip Card" />
+                  </div>
+
+                  <div>
+                    <div class="text">
+                      <span class="title">Card Holder</span>
+
+                      <span class="value">Neander de Souza</span>
+                    </div>
+
+                    <div class="text">
+                      <span class="title">Valid Thru</span>
+
+                      <span class="value">12/24</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <span>3778 **** **** 1234</span>
+
+                  <img src="./assets/flag-card-white.svg" alt="Flag Card" />
+                </div>
+              </div>
+
+              <div class="card white">
+                <div class="card-top">
+                  <div>
+                    <div class="text">
+                      <span class="title">Balance</span>
+
+                      <span class="value">$5,756</span>
+                    </div>
+
+                    <img src="./assets/chip-card-gray.png" alt="Chip Card" />
+                  </div>
+
+                  <div>
+                    <div class="text">
+                      <span class="title">Card Holder</span>
+
+                      <span class="value">Neander de Souza</span>
+                    </div>
+
+                    <div class="text">
+                      <span class="title">Valid Thru</span>
+
+                      <span class="value">12/24</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <span>3778 **** **** 1234</span>
+
+                  <img src="./assets/flag-card-gray.svg" alt="Flag Card" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-expense">
+            <div class="header">
+              <h4>My Expense</h4>
+            </div>
+
+            <div class="my-expense-container">
+              <canvas id="chart-my-expense"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="recent-transaction">
+          <div class="header">
+            <h4>Recent Transaction</h4>
+          </div>
+
+          <div class="tabs">
+            <div class="tab active">
+              <span>All Transactions</span>
+            </div>
+
+            <div class="tab">
+              <span>Income</span>
+            </div>
+
+            <div class="tab">
+              <span>Expense</span>
+            </div>
+          </div>
+
+          <div class="all-transaction">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div>
+                      <span>Description</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Transaction ID</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Type</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Card</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Date</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Amount</span>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div>
+                      <span>Receipt</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="description">
+                      <span class="title-head">Description</span>
+
+                      <div>
+                        <i class="ph ph-arrow-circle-up"></i>
+
+                        <span>Spotify Subscription</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="transaction-id">
+                      <span class="title-head">Transaction ID</span>
+
+                      <span>#12548796</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="type">
+                      <span class="title-head">Type</span>
+
+                      <span>Shopping</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="card">
+                      <span class="title-head">Card</span>
+
+                      <span>1234 ****</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="date">
+                      <span class="title-head">Date</span>
+
+                      <span>28 Jan, 12:30 AM</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="amount">
+                      <span class="title-head">Amount</span>
+
+                      <span class="expense">-$2,500</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="receipt">
+                      <span class="title-head">Receipt</span>
+
+                      <button type="button" class="download-receipt">
+                        Download
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="description">
+                      <span class="title-head">Description</span>
+
+                      <div>
+                        <i class="ph ph-arrow-circle-down"></i>
+
+                        <span>Freepik Sales</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="transaction-id">
+                      <span class="title-head">Transaction ID</span>
+
+                      <span>#12548796</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="type">
+                      <span class="title-head">Type</span>
+
+                      <span>Transfer</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="card">
+                      <span class="title-head">Card</span>
+
+                      <span>1234 ****</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="date">
+                      <span class="title-head">Date</span>
+
+                      <span>28 Jan, 12:30 AM</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="amount">
+                      <span class="title-head">Amount</span>
+
+                      <span class="income">+$750</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="receipt">
+                      <span class="title-head">Receipt</span>
+
+                      <button type="button" class="download-receipt">
+                        Download
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="description">
+                      <span class="title-head">Description</span>
+
+                      <div>
+                        <i class="ph ph-arrow-circle-up"></i>
+
+                        <span>Mobile Service</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="transaction-id">
+                      <span class="title-head">Transaction ID</span>
+
+                      <span>#12548796</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="type">
+                      <span class="title-head">Type</span>
+
+                      <span>Service</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="card">
+                      <span class="title-head">Card</span>
+
+                      <span>1234 ****</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="date">
+                      <span class="title-head">Date</span>
+
+                      <span>28 Jan, 12:30 AM</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="amount">
+                      <span class="title-head">Amount</span>
+
+                      <span class="expense">-$2,500</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="receipt">
+                      <span class="title-head">Receipt</span>
+
+                      <button type="button" class="download-receipt">
+                        Download
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="description">
+                      <span class="title-head">Description</span>
+
+                      <div>
+                        <i class="ph ph-arrow-circle-down"></i>
+
+                        <span>Wilson</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="transaction-id">
+                      <span class="title-head">Transaction ID</span>
+
+                      <span>#12548796</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="type">
+                      <span class="title-head">Type</span>
+
+                      <span>Transfer</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="card">
+                      <span class="title-head">Card</span>
+
+                      <span>1234 ****</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="date">
+                      <span class="title-head">Date</span>
+
+                      <span>28 Jan, 12:30 AM</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="amount">
+                      <span class="title-head">Amount</span>
+
+                      <span class="income">+$750</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="receipt">
+                      <span class="title-head">Receipt</span>
+
+                      <button type="button" class="download-receipt">
+                        Download
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="description">
+                      <span class="title-head">Description</span>
+
+                      <div>
+                        <i class="ph ph-arrow-circle-up"></i>
+
+                        <span>Emily</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="transaction-id">
+                      <span class="title-head">Transaction ID</span>
+
+                      <span>#12548796</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="type">
+                      <span class="title-head">Type</span>
+
+                      <span>Transfer</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="card">
+                      <span class="title-head">Card</span>
+
+                      <span>1234 ****</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="date">
+                      <span class="title-head">Date</span>
+
+                      <span>28 Jan, 12:30 AM</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="amount">
+                      <span class="title-head">Amount</span>
+
+                      <span class="expense">-$2,500</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="receipt">
+                      <span class="title-head">Receipt</span>
+
+                      <button type="button" class="download-receipt">
+                        Download
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination-container">
+            <button type="button" class="page previous">
+              <i class="ph ph-caret-left"></i>
+
+              Previous
+            </button>
+
+            <button type="button" class="page active">1</button>
+
+            <button type="button" class="page">2</button>
+
+            <button type="button" class="page">3</button>
+
+            <button type="button" class="page">4</button>
+
+            <button type="button" class="page next">
+              Next
+
+              <i class="ph ph-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const dataMyExpense = {
+      labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
+      datasets: [
+        {
+          label: "My Expense",
+          data: [500, 350, 75, 90, 250, 275, 190],
+          backgroundColor: "#16DBCC",
+          borderColor: "#16DBCC",
+          borderWidth: 1,
+          borderRadius: Number.MAX_VALUE,
+          borderSkipped: false,
+          barPercentage: 0.6,
+        },
+      ],
+    };
+
+    const configMyExpense = {
+      type: "bar",
+      data: dataMyExpense,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxMyExpense = document.getElementById("chart-my-expense");
+
+    new Chart(ctxMyExpense, configMyExpense);
+
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

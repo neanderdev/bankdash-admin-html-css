@@ -1,0 +1,1396 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+
+  background-color: #f5f7fa;
+}
+
+aside {
+  width: 25rem;
+  height: 100%;
+
+  background-color: #ffffff;
+}
+
+aside .close {
+  background: transparent;
+  border: 0;
+
+  display: none;
+  justify-content: end;
+
+  cursor: pointer;
+}
+
+aside .close i {
+  font-size: 2.4rem;
+
+  color: #1fcb4f;
+}
+
+aside .logo {
+  padding: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+aside .logo h4 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+aside ul {
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+aside ul li {
+  display: flex;
+  align-items: center;
+}
+
+aside ul li.active::before {
+  content: "";
+
+  width: 0.6rem;
+  height: 4rem;
+
+  position: absolute;
+
+  left: 0;
+
+  background-color: var(--Primary-3, #2d60ff);
+
+  border-top-right-radius: 0.42rem;
+  border-bottom-right-radius: 0.42rem;
+}
+
+aside ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: #b1b1b1;
+
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+aside ul li.active a {
+  color: var(--Primary-3, #2d60ff);
+}
+
+aside ul li a i {
+  color: #b1b1b1;
+
+  font-size: 2.4rem;
+}
+
+aside ul li.active a i {
+  color: var(--Primary-3, #2d60ff);
+}
+
+main {
+  width: 100%;
+}
+
+main header {
+  width: 100%;
+  height: 10rem;
+
+  padding: 0 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+}
+
+main header .header-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .header-container .open-sidebar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .header-container .open-sidebar i {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 3.2rem;
+}
+
+main header .header-container h2 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main header .info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .info .input-icon {
+  width: 25rem;
+
+  padding: 1.2rem 0;
+
+  background-color: #f5f7fa;
+
+  border-radius: 4rem;
+
+  position: relative;
+}
+
+main header .info .input-icon i {
+  color: #718ebf;
+
+  font-size: 2rem;
+
+  position: absolute;
+
+  left: 1.2rem;
+}
+
+main header .info .input-icon input {
+  width: 100%;
+
+  padding-left: 3.6rem;
+  padding-right: 1.2rem;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .info .button-icon {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f7fa;
+
+  outline: 0;
+  border: 0;
+  border-radius: 2.5rem;
+}
+
+main header .info .button-icon i {
+  font-size: 2.4rem;
+}
+
+main header .info .button-icon.settings i {
+  color: #718ebf;
+}
+
+main header .info .button-icon.notifications i {
+  color: #fe5c73;
+}
+
+main header .info .avatar {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 2.5rem;
+}
+
+main .container {
+  padding: 2rem 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-recent-transaction {
+  display: grid;
+  grid-template-columns: 1fr 35rem;
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .header a {
+  color: #343c6a;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: right;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .cards {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .cards .card {
+  padding: 2.6rem;
+
+  border-radius: 2.5rem;
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .cards .card.purple {
+  background: linear-gradient(107deg, #4c49ed 2.61%, #0a06f4 101.2%);
+}
+
+main .container .my-cards-and-recent-transaction .my-cards .cards .card.white {
+  background-color: #ffffff;
+
+  border: 0.1rem solid #dfeaf2;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text
+  .title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.purple
+  .card-top
+  div
+  .text
+  .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.white
+  .card-top
+  div
+  .text
+  .title {
+  color: #718ebf;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text
+  .value {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.purple
+  .card-top
+  div
+  .text
+  .value {
+  color: #ffffff;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.white
+  .card-top
+  div
+  .text
+  .value {
+  color: #343c6a;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  img {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-bottom {
+  padding-top: 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-bottom
+  span {
+  font-family: "Lato", sans-serif;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.purple
+  .card-bottom
+  span {
+  color: #ffffff;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card.white
+  .card-bottom
+  span {
+  color: #343c6a;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .my-cards
+  .cards
+  .card
+  .card-bottom
+  img {
+  width: 4.4rem;
+  height: 3rem;
+}
+
+main .container .my-cards-and-recent-transaction .recent-transaction {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .my-cards-and-recent-transaction .recent-transaction .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .header
+  h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .my-cards-and-recent-transaction .recent-transaction .table {
+  height: 100%;
+
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon {
+  width: 5.5rem;
+  height: 5.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 2.75rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.yellow {
+  background-color: #fff5d9;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.blue {
+  background-color: #e7edff;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.green {
+  background-color: #dcfaf8;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon
+  i {
+  font-size: 2.4rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.yellow
+  i {
+  color: #ffbb38;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.blue
+  i {
+  color: #396aff;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .icon.green
+  i {
+  color: #16dbcc;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .table-data-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .table-data-info
+  .title {
+  color: #232323;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  div
+  .table-data-info
+  .value {
+  color: #718ebf;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  .value {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: right;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  .value.subtraction {
+  color: #ff4b4a;
+}
+
+main
+  .container
+  .my-cards-and-recent-transaction
+  .recent-transaction
+  .table
+  .table-data
+  .value.sum {
+  color: #41d4a8;
+}
+
+main .container .weekly-activity-and-expense-statistics {
+  display: grid;
+  grid-template-columns: 1fr 35rem;
+  gap: 2.4rem;
+}
+
+main .container .weekly-activity-and-expense-statistics .weekly-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .header
+  h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container {
+  height: 34rem;
+
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container
+  .weekly-activity-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container
+  .weekly-activity-label
+  label {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  color: #718ebf;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container
+  .weekly-activity-label
+  label.deposit::before {
+  content: "";
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  position: absolute;
+
+  left: -2.4rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #16dbcc;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container
+  .weekly-activity-label
+  label.withdraw::before {
+  content: "";
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  position: absolute;
+
+  left: -2.4rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #ff82ac;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .weekly-activity
+  .weekly-activity-container
+  #chart-weekly-activity {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+main .container .weekly-activity-and-expense-statistics .expense-statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .expense-statistics
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .expense-statistics
+  .header
+  h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .expense-statistics
+  .expense-statistics-container {
+  height: 34rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .weekly-activity-and-expense-statistics
+  .expense-statistics
+  .expense-statistics-container
+  #chart-expense-statistics {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+main .container .quick-transfer-and-balance-history {
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+  gap: 2.4rem;
+}
+
+main .container .quick-transfer-and-balance-history .quick-transfer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .quick-transfer-and-balance-history .quick-transfer .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .quick-transfer-and-balance-history .quick-transfer .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container {
+  height: 28rem;
+
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-user
+  img {
+  width: 7rem;
+  height: 7rem;
+
+  border-radius: 3.5rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-user
+  .name {
+  color: #232323;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-user
+  .rule {
+  color: #718ebf;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .button-chevron-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .button-chevron-right
+  button {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f0f0f0;
+
+  outline: 0;
+  border: 0;
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .button-chevron-right
+  button
+  i {
+  color: #718ebf;
+
+  font-size: 2.4rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer
+  span {
+  color: #718ebf;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer
+  .input-quick-transfer {
+  width: 60%;
+  height: 5rem;
+
+  display: flex;
+
+  background-color: #edf1f7;
+
+  border-radius: 5rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer
+  .input-quick-transfer
+  input {
+  width: 100%;
+
+  padding: 0.6rem 1.4rem;
+
+  background-color: transparent;
+  color: #718ebf;
+
+  outline: 0;
+  border: 0;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer
+  .input-quick-transfer
+  button {
+  padding: 0 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: #1814f3;
+  color: #ffffff;
+
+  box-shadow: 0.4rem 0.4rem 1.8rem -0.2rem rgba(231, 228, 232, 0.8);
+
+  outline: 0;
+  border: 0;
+  border-radius: 5rem;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .quick-transfer
+  .quick-transfer-container
+  .quick-transfer-footer
+  .input-quick-transfer
+  button
+  i {
+  color: #ffffff;
+
+  font-size: 2.4rem;
+}
+
+main .container .quick-transfer-and-balance-history .balance-history {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .quick-transfer-and-balance-history .balance-history .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .balance-history
+  .header
+  h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .balance-history
+  .balance-history-container {
+  height: 28rem;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .quick-transfer-and-balance-history
+  .balance-history
+  .balance-history-container
+  #chart-balance-history {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+@media screen and (max-width: 1280px) {
+  main .container .my-cards-and-recent-transaction .my-cards .cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  aside {
+    display: none;
+
+    position: fixed;
+
+    margin-left: -100vw;
+
+    animation-duration: 500ms;
+  }
+
+  aside .close {
+    display: flex;
+
+    width: 100%;
+
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+
+  aside .close i {
+    display: block;
+  }
+
+  main header .header-container .open-sidebar {
+    display: flex;
+  }
+
+  main .container .my-cards-and-recent-transaction .my-cards .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 924px) {
+  main .container .my-cards-and-recent-transaction {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  main .container .weekly-activity-and-expense-statistics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+
+  main .container .quick-transfer-and-balance-history {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main header .info .input-icon {
+    display: none;
+  }
+
+  main .container .weekly-activity-and-expense-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  main .container .quick-transfer-and-balance-history {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main header .info .input-icon,
+  main header .info .settings,
+  main header .info .notifications {
+    display: none;
+  }
+
+  main .container .my-cards-and-recent-transaction .my-cards .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes showSidebar {
+  from {
+    margin-left: -100vw;
+  }
+  to {
+    margin-left: -0vw;
+  }
+}

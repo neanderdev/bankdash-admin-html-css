@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dashboard.css" />
+
+    <title>BankDash | Dashboard</title>
+  </head>
+
+  <body>
+    <aside>
+      <button type="button" class="close" onclick="closeSidebar()">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo BankDash" />
+
+        <h4>BankDash.</h4>
+      </div>
+
+      <ul>
+        <li class="active">
+          <a href="/dashboard.html">
+            <i class="ph-fill ph-house"></i>
+
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="/transactions.html">
+            <i class="ph-fill ph-hand-coins"></i>
+
+            Transactions
+          </a>
+        </li>
+
+        <li>
+          <a href="/accounts.html">
+            <i class="ph-fill ph-user"></i>
+
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="/investments.html">
+            <i class="ph-fill ph-currency-eth"></i>
+
+            Investments
+          </a>
+        </li>
+
+        <li>
+          <a href="/credit-cards.html">
+            <i class="ph-fill ph-credit-card"></i>
+
+            Credit Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="/loans.html">
+            <i class="ph-fill ph-coins"></i>
+
+            Loans
+          </a>
+        </li>
+
+        <li>
+          <a href="/services.html">
+            <i class="ph-fill ph-wrench"></i>
+
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="/setting.html">
+            <i class="ph-fill ph-gear"></i>
+
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="header-container">
+          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <h2>Overview</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-icon">
+            <i class="ph ph-magnifying-glass"></i>
+
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for something"
+            />
+          </div>
+
+          <button type="button" class="button-icon settings">
+            <i class="ph ph-gear"></i>
+          </button>
+
+          <button type="button" class="button-icon notifications">
+            <i class="ph ph-bell"></i>
+          </button>
+
+          <img
+            src="https://github.com/neanderdev.png"
+            alt="Foto de Perfil"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="my-cards-and-recent-transaction">
+          <div class="my-cards">
+            <div class="header">
+              <h4>My Cards</h4>
+
+              <a href="">See All</a>
+            </div>
+
+            <div class="cards">
+              <div class="card purple">
+                <div class="card-top">
+                  <div>
+                    <div class="text">
+                      <span class="title">Balance</span>
+
+                      <span class="value">$5,756</span>
+                    </div>
+
+                    <img src="./assets/chip-card-white.png" alt="Chip Card" />
+                  </div>
+
+                  <div>
+                    <div class="text">
+                      <span class="title">Card Holder</span>
+
+                      <span class="value">Neander de Souza</span>
+                    </div>
+
+                    <div class="text">
+                      <span class="title">Valid Thru</span>
+
+                      <span class="value">12/24</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <span>3778 **** **** 1234</span>
+
+                  <img src="./assets/flag-card-white.svg" alt="Flag Card" />
+                </div>
+              </div>
+
+              <div class="card white">
+                <div class="card-top">
+                  <div>
+                    <div class="text">
+                      <span class="title">Balance</span>
+
+                      <span class="value">$5,756</span>
+                    </div>
+
+                    <img src="./assets/chip-card-gray.png" alt="Chip Card" />
+                  </div>
+
+                  <div>
+                    <div class="text">
+                      <span class="title">Card Holder</span>
+
+                      <span class="value">Neander de Souza</span>
+                    </div>
+
+                    <div class="text">
+                      <span class="title">Valid Thru</span>
+
+                      <span class="value">12/24</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <span>3778 **** **** 1234</span>
+
+                  <img src="./assets/flag-card-gray.svg" alt="Flag Card" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-transaction">
+            <div class="header">
+              <h4>Recent Transaction</h4>
+            </div>
+
+            <div class="table">
+              <div class="table-data">
+                <div>
+                  <div class="icon yellow">
+                    <i class="ph-fill ph-credit-card"></i>
+                  </div>
+
+                  <div class="table-data-info">
+                    <span class="title">Deposit from my Card</span>
+
+                    <span class="value">28 January 2024</span>
+                  </div>
+                </div>
+
+                <span class="value subtraction">-$850</span>
+              </div>
+
+              <div class="table-data">
+                <div>
+                  <div class="icon blue">
+                    <i class="ph ph-paypal-logo"></i>
+                  </div>
+
+                  <div class="table-data-info">
+                    <span class="title">Deposit Paypal</span>
+
+                    <span class="value">25 January 2024</span>
+                  </div>
+                </div>
+
+                <span class="value sum">+$2,500</span>
+              </div>
+
+              <div class="table-data">
+                <div>
+                  <div class="icon green">
+                    <i class="ph ph-currency-dollar"></i>
+                  </div>
+
+                  <div class="table-data-info">
+                    <span class="title">Neander de Souza</span>
+
+                    <span class="value">21 January 2024</span>
+                  </div>
+                </div>
+
+                <span class="value sum">+$5,400</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekly-activity-and-expense-statistics">
+          <div class="weekly-activity">
+            <div class="header">
+              <h4>Weekly Activity</h4>
+            </div>
+
+            <div class="weekly-activity-container">
+              <div class="weekly-activity-label">
+                <label class="deposit">Deposit</label>
+
+                <label class="withdraw">Withdraw</label>
+              </div>
+
+              <canvas id="chart-weekly-activity"></canvas>
+            </div>
+          </div>
+
+          <div class="expense-statistics">
+            <div class="header">
+              <h4>Expense Statistics</h4>
+            </div>
+
+            <div class="expense-statistics-container">
+              <canvas id="chart-expense-statistics"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-transfer-and-balance-history">
+          <div class="quick-transfer">
+            <div class="header">
+              <h4>Quick Transfer</h4>
+            </div>
+
+            <div class="quick-transfer-container">
+              <div class="quick-transfer-users">
+                <div class="quick-transfer-user">
+                  <img
+                    src="https://github.com/neanderdev.png"
+                    alt="Foto de Perfil"
+                  />
+
+                  <span class="name">Neander de Souza</span>
+
+                  <span class="rule">CEO</span>
+                </div>
+
+                <div class="quick-transfer-user">
+                  <img
+                    src="https://github.com/neanderdev.png"
+                    alt="Foto de Perfil"
+                  />
+
+                  <span class="name">Neander de Souza</span>
+
+                  <span class="rule">Director</span>
+                </div>
+
+                <div class="quick-transfer-user">
+                  <img
+                    src="https://github.com/neanderdev.png"
+                    alt="Foto de Perfil"
+                  />
+
+                  <span class="name">Neander de Souza</span>
+
+                  <span class="rule">Design</span>
+                </div>
+
+                <div class="button-chevron-right">
+                  <button type="button">
+                    <i class="ph ph-caret-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="quick-transfer-footer">
+                <span>Write Amount</span>
+
+                <div class="input-quick-transfer">
+                  <input type="number" name="value" placeholder="25,50" />
+
+                  <button type="button">
+                    Send
+
+                    <i class="ph ph-paper-plane-tilt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="balance-history">
+            <div class="header">
+              <h4>Balance History</h4>
+            </div>
+
+            <div class="balance-history-container">
+              <canvas id="chart-balance-history"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const dataWeeklyActivity = {
+      labels: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fru"],
+      datasets: [
+        {
+          label: "Deposit",
+          data: [500, 350, 75, 90, 250, 275, 190],
+          backgroundColor: "#16DBCC",
+          borderColor: "#16DBCC",
+          borderWidth: 1,
+          borderRadius: Number.MAX_VALUE,
+          borderSkipped: false,
+          barPercentage: 0.4,
+        },
+        {
+          label: "Withdraw",
+          data: [150, 125, 475, 55, 279, 263, 45],
+          backgroundColor: "#FF82AC",
+          borderColor: "#FF82AC",
+          borderWidth: 1,
+          borderRadius: Number.MAX_VALUE,
+          borderSkipped: false,
+          barPercentage: 0.4,
+        },
+      ],
+    };
+
+    const configWeeklyActivity = {
+      type: "bar",
+      data: dataWeeklyActivity,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxWeeklyActivity = document.getElementById("chart-weekly-activity");
+
+    new Chart(ctxWeeklyActivity, configWeeklyActivity);
+
+    const dataExpenseStatistics = {
+      labels: ["Entertainment", "Bill Expense", "Others", "Others"],
+      datasets: [
+        {
+          label: "Expense Statistics",
+          data: [30, 15, 35, 20],
+          backgroundColor: ["#343C6A", "#FC7900", "#1814F3", "#FA00FF"],
+        },
+      ],
+    };
+
+    const configExpenseStatistics = {
+      type: "pie",
+      data: dataExpenseStatistics,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxExpenseStatistics = document.getElementById(
+      "chart-expense-statistics"
+    );
+
+    new Chart(ctxExpenseStatistics, configExpenseStatistics);
+
+    const dataBalanceHistory = {
+      labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [
+        {
+          label: "Balance History",
+          data: [600, 685, 102, 259, 870, 402],
+          borderColor: "#1814F3",
+          backgroundColor: "rgba(24, 20, 243, .20)",
+          fill: true,
+          pointStyle: false,
+          tension: 0.4,
+        },
+      ],
+    };
+
+    const configBalanceHistory = {
+      type: "line",
+      data: dataBalanceHistory,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    };
+
+    const ctxBalanceHistory = document.getElementById("chart-balance-history");
+
+    new Chart(ctxBalanceHistory, configBalanceHistory);
+
+    const sidebar = document.querySelector("aside");
+    const container = document.querySelector("main");
+
+    function toggleSidebar() {
+      sidebar.style.display = "block";
+      sidebar.style.marginLeft = "0";
+      sidebar.style.animationName = "showSidebar";
+      sidebar.style.zIndex = "1";
+
+      container.style.filter = "blur(2px)";
+    }
+
+    function closeSidebar() {
+      sidebar.style.marginLeft = "-100vw";
+      sidebar.style.animationName = "";
+      sidebar.style.zIndex = "0";
+
+      container.style.filter = "";
+    }
+
+    window.addEventListener("resize", function (event) {
+      if (window.innerWidth > 1024) {
+        sidebar.style.marginLeft = "0";
+        sidebar.style.animationName = "";
+        sidebar.style.zIndex = "0";
+
+        container.style.filter = "";
+      }
+    });
+  </script>
+</html>

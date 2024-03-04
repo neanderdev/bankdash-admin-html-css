@@ -1,0 +1,1093 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+
+  background-color: #f5f7fa;
+}
+
+aside {
+  width: 25rem;
+  height: 100%;
+
+  background-color: #ffffff;
+}
+
+aside .close {
+  background: transparent;
+  border: 0;
+
+  display: none;
+  justify-content: end;
+
+  cursor: pointer;
+}
+
+aside .close i {
+  font-size: 2.4rem;
+
+  color: #1fcb4f;
+}
+
+aside .logo {
+  padding: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+aside .logo h4 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+aside ul {
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+aside ul li {
+  display: flex;
+  align-items: center;
+}
+
+aside ul li.active::before {
+  content: "";
+
+  width: 0.6rem;
+  height: 4rem;
+
+  position: absolute;
+
+  left: 0;
+
+  background-color: var(--Primary-3, #2d60ff);
+
+  border-top-right-radius: 0.42rem;
+  border-bottom-right-radius: 0.42rem;
+}
+
+aside ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: #b1b1b1;
+
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+aside ul li.active a {
+  color: var(--Primary-3, #2d60ff);
+}
+
+aside ul li a i {
+  color: #b1b1b1;
+
+  font-size: 2.4rem;
+}
+
+aside ul li.active a i {
+  color: var(--Primary-3, #2d60ff);
+}
+
+main {
+  width: 100%;
+}
+
+main header {
+  width: 100%;
+  height: 10rem;
+
+  padding: 0 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+}
+
+main header .header-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .header-container .open-sidebar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .header-container .open-sidebar i {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 3.2rem;
+}
+
+main header .header-container h2 {
+  color: var(--Primary-2, #343c6a);
+
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main header .info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main header .info .input-icon {
+  width: 25rem;
+
+  padding: 1.2rem 0;
+
+  background-color: #f5f7fa;
+
+  border-radius: 4rem;
+
+  position: relative;
+}
+
+main header .info .input-icon i {
+  color: #718ebf;
+
+  font-size: 2rem;
+
+  position: absolute;
+
+  left: 1.2rem;
+}
+
+main header .info .input-icon input {
+  width: 100%;
+
+  padding-left: 3.6rem;
+  padding-right: 1.2rem;
+
+  background-color: transparent;
+
+  outline: 0;
+  border: 0;
+}
+
+main header .info .button-icon {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f7fa;
+
+  outline: 0;
+  border: 0;
+  border-radius: 2.5rem;
+}
+
+main header .info .button-icon i {
+  font-size: 2.4rem;
+}
+
+main header .info .button-icon.settings i {
+  color: #718ebf;
+}
+
+main header .info .button-icon.notifications i {
+  color: #fe5c73;
+}
+
+main header .info .avatar {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 2.5rem;
+}
+
+main .container {
+  padding: 2rem 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-my-expense {
+  display: grid;
+  grid-template-columns: 1fr 35rem;
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .my-cards-and-my-expense .my-cards .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .my-cards-and-my-expense .my-cards .header .add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: transparent;
+  color: #343c6a;
+
+  outline: 0;
+  border: 0;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: right;
+}
+
+main .container .my-cards-and-my-expense .my-cards .header .add-card i {
+  font-size: 2rem;
+
+  color: #343c6a;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card {
+  padding: 2.6rem;
+
+  border-radius: 2.5rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card.purple {
+  background: linear-gradient(107deg, #4c49ed 2.61%, #0a06f4 101.2%);
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card.white {
+  background-color: #ffffff;
+
+  border: 0.1rem solid #dfeaf2;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card .card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card .card-top div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text
+  .title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.purple
+  .card-top
+  div
+  .text
+  .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.white
+  .card-top
+  div
+  .text
+  .title {
+  color: #718ebf;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  .text
+  .value {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.purple
+  .card-top
+  div
+  .text
+  .value {
+  color: #ffffff;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.white
+  .card-top
+  div
+  .text
+  .value {
+  color: #343c6a;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-top
+  div
+  img {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+main .container .my-cards-and-my-expense .my-cards .cards .card .card-bottom {
+  padding-top: 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-bottom
+  span {
+  font-family: "Lato", sans-serif;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.purple
+  .card-bottom
+  span {
+  color: #ffffff;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card.white
+  .card-bottom
+  span {
+  color: #343c6a;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-cards
+  .cards
+  .card
+  .card-bottom
+  img {
+  width: 4.4rem;
+  height: 3rem;
+}
+
+main .container .my-cards-and-my-expense .my-expense {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .my-cards-and-my-expense .my-expense .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .my-cards-and-my-expense .my-expense .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .my-cards-and-my-expense .my-expense .my-expense-container {
+  height: 22.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border-radius: 2.5rem;
+}
+
+main
+  .container
+  .my-cards-and-my-expense
+  .my-expense
+  .my-expense-container
+  #chart-my-expense {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+main .container .recent-transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+main .container .recent-transaction .header h4 {
+  color: #343c6a;
+
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main .container .recent-transaction .tabs {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+main .container .recent-transaction .tabs .tab {
+  padding: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+main .container .recent-transaction .tabs .tab.active span {
+  color: #1814f3;
+}
+
+main .container .recent-transaction .tabs .tab span {
+  color: #718ebf;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main .container .recent-transaction .tabs .tab.active::after {
+  content: "";
+
+  width: 100%;
+  height: 0.3rem;
+
+  background-color: #1814f3;
+
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+
+  position: absolute;
+
+  bottom: 0;
+}
+
+main .container .recent-transaction .all-transaction {
+  width: 100%;
+
+  padding: 1.2rem;
+
+  background-color: #ffffff;
+
+  border-radius: 1.6rem;
+}
+
+main .container .recent-transaction .all-transaction table {
+  width: 100%;
+
+  display: table;
+
+  border-spacing: 1.2rem;
+  border-collapse: separate;
+}
+
+main .container .recent-transaction .all-transaction table thead tr th {
+  padding: 1.2rem;
+}
+
+main .container .recent-transaction .all-transaction table thead tr th div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  thead
+  tr
+  th:nth-child(1)
+  div,
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  thead
+  tr
+  th:nth-child(4)
+  div,
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  thead
+  tr
+  th:nth-child(7)
+  div {
+  justify-content: start;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  thead
+  tr
+  th
+  div
+  span {
+  color: #718ebf;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main .container .recent-transaction .all-transaction table tbody tr td {
+  padding: 0 1.2rem;
+}
+
+main .container .recent-transaction .all-transaction table tbody tr td div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td:nth-child(1)
+  div,
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td:nth-child(4)
+  div,
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td:nth-child(7)
+  div {
+  justify-content: start;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  div
+  .title-head {
+  display: none;
+
+  color: #718ebf;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main .content .all-transaction table tbody tr td div span {
+  color: #232323;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  .description
+  div {
+  gap: 0.8rem;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  .description
+  div
+  i {
+  font-size: 3.2rem;
+
+  color: #718ebf;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  .amount
+  .income {
+  color: #16dbaa;
+
+  font-weight: 500;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  .amount
+  .expense {
+  color: #fe5c73;
+
+  font-weight: 500;
+}
+
+main
+  .container
+  .recent-transaction
+  .all-transaction
+  table
+  tbody
+  tr
+  td
+  .receipt
+  button {
+  padding: 0.6rem 1.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  color: #123288;
+
+  outline: 0;
+  border: 0.1rem solid #123288;
+  border-radius: 99rem;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+main .container .recent-transaction .pagination-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+main .container .recent-transaction .pagination-container .page {
+  padding: 0.8rem 1.2rem;
+
+  background-color: transparent;
+  color: #1814f3;
+
+  outline: 0;
+  border: 0;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main .container .recent-transaction .pagination-container .page.active {
+  background-color: #1814f3;
+  color: #ffffff;
+
+  border-radius: 0.8rem;
+}
+
+main .container .recent-transaction .pagination-container .previous,
+main .container .recent-transaction .pagination-container .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+main .container .recent-transaction .pagination-container .previous i,
+main .container .recent-transaction .pagination-container .next i {
+  font-size: 2rem;
+
+  color: #1814f3;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  aside {
+    display: none;
+
+    position: fixed;
+
+    margin-left: -100vw;
+
+    animation-duration: 500ms;
+  }
+
+  aside .close {
+    display: flex;
+
+    width: 100%;
+
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+
+  aside .close i {
+    display: block;
+  }
+
+  main header .header-container .open-sidebar {
+    display: flex;
+  }
+
+  main .container .recent-transaction .all-transaction table thead {
+    display: none;
+  }
+
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(7) {
+    border-bottom: 0.1rem solid #e1e2e9;
+  }
+
+  main .container .recent-transaction .all-transaction table tbody tr td {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(1)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(2)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(3)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(4)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(5)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(6)
+    div,
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td:nth-child(7)
+    div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main
+    .container
+    .recent-transaction
+    .all-transaction
+    table
+    tbody
+    tr
+    td
+    div
+    .title-head {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 924px) {
+  main .container .my-cards-and-my-expense {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main header .info .input-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main header .info .input-icon,
+  main header .info .settings,
+  main header .info .notifications {
+    display: none;
+  }
+
+  main .container .my-cards-and-my-expense .my-cards .cards {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+@keyframes showSidebar {
+  from {
+    margin-left: -100vw;
+  }
+  to {
+    margin-left: -0vw;
+  }
+}
